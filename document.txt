@@ -1,0 +1,61 @@
+651651651,00
+651651651,20
+651651651,02
+
+
+
+999.999.999,00
+          1 real    len(1) 
+         10 reais   len(2)
+        100 reais   len(3)
+       1000 reais   len(4)
+      10000 reais   len(5)
+     100000 reais   len(6)
+    1000000 reais   len(7)
+   10000000 reais   len(8)
+  100000000 reais   len(9)
+
+
+if len(1): Check
+    1 real - 9 reais
+    UNIDADE
+elif len(2): Check
+    DEZENA
+    10 - reais - 99 reais
+elif len(3): Check
+    100 - reais - 999 reais
+    CENTENA 
+elif len(4): Check
+    1.000 - reais - 9999 reais
+    MILHAR
+elif len(5): Check
+    10.000 ( UNIDADE + mil ) - 99.999 ( DEZENA + mil + reais)
+    DEZ MILHAR
+elif len(6):
+    100.000 ( CENTENA + mil ) - 999.999 ( CENTENA + e + DEZENA + mil + CENTENA + e + DEZENA + reais)
+    CENTENA DE MILHAR
+elif len(7):
+    1.000.000 ( UNIDADE + milhão ) - 9.999.999 ( UNIDADE + milhões + CENTENA + e + DEZENA + UNIDADE  + reais)
+    MILHÃO
+elif len(8):
+    10.000.000 ( DEZ + milhões ) - 99.999.999 ( DEZENA + e + UNIDADE + milhões + , + CENTENA + e + DEZENA + UNIDADE  + reais)
+elif len(9):
+    100.000.000 ( CENTENA + milhões ) - 999.999.999 ( CENTENA + e + DEZENA + e + UNIDADE + milhões + , +  CENTENA + e + DEZENA +e+ UNIDADE  + mil + , + CENTENA + DEZENA +e+ UNIDADE reais)
+
+
+
+por favor, pode informar seu conhecimento, conforme abaixo:
+
+- Conhecimentos em design e arquitetura de software;
+    R: Na questão de arquitetura tenho conhecimento na de micro-serviços que utilizo nos meus projetos pessoais.. e sobre design pattern, tenho conhecimento sobre o MVT do django e MVC, sempre procuro fazer tudo OOP e querendo adquirir mais conhecimento sobre os mesmos.
+- Desenvolvimento WEB (HTML, CSS, Javascript, jQuery);
+    R: Compreendo perfeitamentamente a função das tags html's e a inclusão de seus estilos, uso Javascript/jQuery para funções que não realizem um reload da página, para validação de dados no frontend, requisições para API no backend e Webscokets.. inclusive desenvolvi recentemente um chatbot com uso dessas tecnologias https://chatapp-container.herokuapp.com/ feito deploy no heroku e o git dele https://github.com/felipefoc/ChatApp, também possuo um App de tickets para auxilio na minha empresa atual 
+    https://mayer-tech-tickets.herokuapp.com/... https://github.com/felipefoc/django-tickets/
+ - Metodologias ágeis;
+    R: Tenho conhecimento sobre SCRUM e Kanban mas ainda não tive a oportunidade de trabalhar em equipe.. hoje trabalho como fullstack em uma empresa que não é de tecnologia o que acaba me limitando nesse sentido.
+- Práticas de XP (TDD, pair programming, refactoring, continuous integration);  
+    R: Recentemente tenho focado mais em testes.. então a cada Feature nova desenvolvo um teste unitário para a mesma.. Refatoro códigos sempre porque a cada dia me desenvolvo mais e faço reuniões constantes com pessoas mais sêniors ná area, ainda não pude trabalhar com continuous integration, pois novamente.. nunca tive uma equipe.
+- Testes unitários, de aceitação, mocks, Selenium.
+    R: Já fiz projetos com Selenium junto com Bots para Telegram e webscrapping (junto com beautiful soup), sobre os testes venho me aprofundo a cada dia (incluindo mockar).
+- Extra:
+    R: Também possuo conhecimento com Docker e Docker-compose, sempre autodidata. 
