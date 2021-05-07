@@ -11,46 +11,33 @@
 - Aceitar apenas no formato XXXX.XX # Done
 - Aceitar até 9 digitos antes da virgula e 2 após # Done
 - Transformar os centavos por extenso # Done
-- Trasformar os primeiros 4 digitos por extenso
+- Trasformar os primeiros 4 digitos por extenso # Done
 """
 
 
+from os import device_encoding
 from validator import validate_line
-from classes import Cents, Money, Reais 
-    
-    # fix number='10000,00'
-
-arg = Money(
-    number='100000,14'
-)
-
-print(f'BEFORE_COMMA:{arg.before_comma} AFTER_COMMA:{arg.after_comma} FULL_NUMBER:{arg.full_number}')
-calc = Cents(
-    dezenas=arg.after_comma
-)
-calc2 = Reais(
-    number=arg.before_comma
-)
+from classes import Cents, Money
+from functions import _milhao, _milhar, _reais
 
 
-print(f'{calc2.reais_to_extense()} {calc.dezenas_to_extense()}')
+def main():
+    document = open("document.txt", "r")
+    for line in document:
+        line = line.strip()
+        if validate_line(line):
+            value = Money(line)
+            cents = Cents(value.after_comma).cents_extense()
+            if len(value.before_comma) < 4:
+                left_side = _reais(value.before_comma)
+            elif len(value.before_comma) > 3 and len(value.before_comma) < 7:
+                left_side = _milhar(value.before_comma)
+            elif len(value.before_comma) > 6:
+                left_side = _milhao(value.before_comma)
+            print(f"{line} = {left_side} {cents}")
+        else:
+            print(f"{line} invalida/não suportadada")
 
 
-if len(arg.before_comma) >= 7:
-    centena(arg.before_comma)
-
-
-
-
-
-### read doc
-# document = open("document.txt", "r")
-# for line in document:
-#     line = line.strip()
-#     if validate_line(line):
-#         value = Money(line)
-#         print(value.before_comma, value.after_comma, value.full_number)
-#     else:
-#         print(f'{line} invalida')
-   
-    
+if __name__ == "__main__":
+    main()
