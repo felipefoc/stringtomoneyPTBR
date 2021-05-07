@@ -36,7 +36,8 @@ calc2 = Reais(
 print(f'{calc2.reais_to_extense()} {calc.dezenas_to_extense()}')
 
 
-
+if len(arg.before_comma) >= 7:
+    centena(arg.before_comma)
 
 
 
