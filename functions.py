@@ -79,7 +79,7 @@ def _milhao(string):  # sourcery no-metrics
                 else:
                     res += f"{CENTENAS[int(i)]}"
             elif i == "1":
-                res += f"{CENTENAS[int(i)]}"
+                res += f"{CENTENAS[int(i)]} e "
             else:
                 res += f"{CENTENAS[int(i)]} e "
 
